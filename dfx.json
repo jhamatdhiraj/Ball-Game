@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "BlockChain_backend": {
+      "main": "src/BlockChain_backend/main.mo",
+      "type": "motoko"
+    },
+    "BlockChain_frontend": {
+      "dependencies": [
+        "BlockChain_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/BlockChain_frontend/src/index.html"
+      },
+      "source": [
+        "src/BlockChain_frontend/assets",
+        "dist/BlockChain_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
